@@ -6,7 +6,7 @@ Welcome to the project! Follow these steps to set up the environment and get the
 ## Steps to Install and Run
 
 1. **Clone the repository**  
-   First, download or clone the repository to your local machine:
+   First, download Zip File or clone the repository to your local machine:
    ```bash
    git clone https://github.com/your-repo-url.git
    cd your-repo-folder
