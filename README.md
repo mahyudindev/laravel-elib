@@ -41,7 +41,7 @@ Welcome to the project! Follow these steps to set up the environment and get the
 6. **Run Database Migrations**  
    Now, migrate the database to create the necessary tables:
    ```bash
-   php artisan migrate
+   php artisan migrate --seed
    ```
 
 7. **Start the Development Server**  
