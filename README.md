@@ -8,9 +8,13 @@ Welcome to the project! Follow these steps to set up the environment and get the
 1. **Clone the repository**  
    First, download Zip File or clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-repo-url.git
-   cd your-repo-folder
+   git clone https://github.com/mahyudindev/laravel-elib
+   cd laravel-elib
    ```
+For Laragon Users
+Copy to C:laragon
+
+
 
 2. **Install Dependencies**  
    Inside the project directory, run the following command to install all necessary PHP packages:
@@ -42,6 +46,11 @@ Welcome to the project! Follow these steps to set up the environment and get the
    Now, migrate the database to create the necessary tables:
    ```bash
    php artisan migrate --seed
+   ```
+8. **Runing tailwind **  
+   :
+   ```bash
+   npm install && npm run dev
    ```
 
 7. **Start the Development Server**  
