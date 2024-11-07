@@ -7,14 +7,11 @@ use Illuminate\Support\Facades\DB;
 
 class BooksTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        // Daftar judul dan pengarang
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('books')->truncate(); //hapus file lama
+
         $titles = [
             'Laskar Pelangi',
             'Bumi Manusia',
@@ -31,7 +28,6 @@ class BooksTableSeeder extends Seeder
         $authors = [
             'Andrea Hirata',
             'Pramoedya Ananta Toer',
-            'Pramoedya Ananta Toer',
             'Marah Roesli',
             'Tere Liye',
             'Habiburrahman El Shirazy',
@@ -41,12 +37,20 @@ class BooksTableSeeder extends Seeder
             'A. Fuadi'
         ];
 
-        // Menghasilkan 100 data
-        for ($i = 0; $i < 100; $i++) {
+        $images = [
+            'book1.jpg',
+            'book2.jpg',
+            'book3.jpg',
+            'book4.jpg',
+            'book5.jpg'
+        ];
+
+        for ($i = 0; $i < 10; $i++) {
             DB::table('books')->insert([
-                'title' => $titles[array_rand($titles)], // Pilih judul secara acak
-                'author' => $authors[array_rand($authors)], // Pilih pengarang secara acak
-                'category' => 'Fiksi', // Contoh kategori, bisa disesuaikan
+                'title' => $titles[array_rand($titles)],
+                'author' => $authors[array_rand($authors)],
+                'category' => 'Fiksi',
+                'image' => $images[array_rand($images)],
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
